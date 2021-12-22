@@ -1,4 +1,4 @@
-from django.urls import re_path
+from django.urls import re_path, path
 
 from pattern_library import get_pattern_template_suffix, views
 
@@ -22,4 +22,7 @@ urlpatterns = [
         views.RenderPatternView.as_view(),
         name='render_pattern'
     ),
+
+    # API rendering
+    path('api/v1/render-pattern', views.render_pattern_api, name='render_pattern_api'),
 ]

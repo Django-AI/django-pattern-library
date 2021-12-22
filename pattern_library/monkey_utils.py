@@ -31,7 +31,7 @@ def override_tag(register, name, default_html=None):
 
                 # Load pattern's config
                 current_template_name = parser.origin.template_name
-                pattern_config = get_pattern_config(current_template_name)
+                tag_overrides = context.get('__pattern_library_tag_overrides', {})
 
                 # Extract values for lookup from the token
                 bits = token.split_contents()
@@ -39,7 +39,7 @@ def override_tag(register, name, default_html=None):
                 arguments = ' '.join(bits[1:]).strip()
 
                 # Get config for a specific tag
-                tag_config = pattern_config.get('tags', {}).get(tag_name, {})
+                tag_config = tag_overrides.get(tag_name, {})
                 if tag_config:
                     # Get config for specific arguments
                     tag_config = tag_config.get(arguments, {})
