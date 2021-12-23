@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Allow `.yml` extension for YAML files. ([#161](https://github.com/torchbox/django-pattern-library/issues/161))
+
 ## [0.6.0](https://github.com/torchbox/django-pattern-library/releases/tag/v0.6.0) - 2021-12-21
 
 - Make `default_app_config conditional` to avoid [deprecation warnings](https://docs.djangoproject.com/en/3.2/ref/applications/#for-application-authors) for Django versions >= 3.2 ([#153](https://github.com/torchbox/django-pattern-library/issues/153), [#160](https://github.com/torchbox/django-pattern-library/pull/160)).
